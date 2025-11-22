@@ -3,7 +3,6 @@
 
 A high-performance **React + TypeScript + Redux Toolkit** dashboard designed to handle large marketing datasets (~5,000+ records) with fast rendering, smart state management, and beautiful data visualization — all without using any UI/CSS libraries.
 
-![Dashboard Preview](https://via.placeholder.com/1200x350?text=Marketing+Dashboard)
 
 ---
 
@@ -23,17 +22,12 @@ A high-performance **React + TypeScript + Redux Toolkit** dashboard designed to 
 
 ---
 
-## 🎥 Demo
-
-> (Optional) Add screenshots or a deployed link here.
-
----
 
 ## 🏗️ Tech Stack
 
 | Category | Technology |
 |---------|------------|
-| Framework | React 18 |
+| Framework | React 19 |
 | Language | TypeScript |
 | State Management | Redux Toolkit + React-Redux |
 | Charts | Recharts |
