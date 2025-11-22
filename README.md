@@ -1,73 +1,201 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# 📊 Marketing Performance Dashboard
 
-Currently, two official plugins are available:
+A high-performance **React + TypeScript + Redux Toolkit** dashboard designed to handle large marketing datasets (~5,000+ records) with fast rendering, smart state management, and beautiful data visualization — all without using any UI/CSS libraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Dashboard Preview](https://via.placeholder.com/1200x350?text=Marketing+Dashboard)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+✅ **Large Dataset Handling** (5,000+ rows)  
+✅ **Paginated Table** with Sorting + Search  
+✅ **Column-Level Filters** (Min/Max Spend, Min/Max CTR)  
+✅ **Global Filters** (Channel, Region, Keyword Search)  
+✅ **Dynamic Metrics** (Spend, Impressions, Clicks, Conversions, CTR%)  
+✅ **Performance Insights Bar Chart** (Recharts)  
+✅ **Redux Toolkit + Memoized Selectors** for top performance  
+✅ **Custom UI** — No Tailwind, Bootstrap, MUI, AntD, etc.  
+✅ **Lighthouse Score Target**: > 90  
+✅ **Fully Typed with TypeScript**  
+✅ **Vite-powered** ⚡ blazing-fast dev experience  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🎥 Demo
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+> (Optional) Add screenshots or a deployed link here.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🏗️ Tech Stack
+
+| Category | Technology |
+|---------|------------|
+| Framework | React 18 |
+| Language | TypeScript |
+| State Management | Redux Toolkit + React-Redux |
+| Charts | Recharts |
+| Build Tool | Vite |
+| Styling | Custom CSS (no UI libraries) |
+
+---
+
+## 📁 Project Structure
+
+```
+marketing-dashboard/
+├─ public/
+├─ src/
+│  ├─ components/
+│  │  ├─ FiltersBar.tsx
+│  │  ├─ TotalsPanel.tsx
+│  │  ├─ DataTable.tsx
+│  │  └─ PerformanceChart.tsx
+│  ├─ features/
+│  │  └─ marketingSlice.ts
+│  ├─ data/
+│  │  └─ marketingData.json
+│  ├─ store.ts
+│  ├─ types.ts
+│  ├─ App.tsx
+│  ├─ main.tsx
+│  └─ styles.css
+├─ package.json
+├─ vite.config.ts
+└─ README.md
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧠 Key Concepts & Performance Optimizations
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+⚡ **Memoized Selectors (`createSelector`)**  
+Prevents unnecessary recalculations of filtered/sorted data.
+
+⚡ **Pagination**  
+Only renders 10–50 rows at a time for smooth UI.
+
+⚡ **React.memo + useCallback + useMemo**  
+Reduces re-renders and improves responsiveness.
+
+⚡ **Pure Redux Slice**  
+All filtering, sorting & aggregation stays predictable and testable.
+
+---
+
+## 📥 Dataset Format
+
+Place your data file at:
+
 ```
+src/data/marketingData.json
+```
+
+Each record should look like:
+
+```json
+{
+  "id": 1,
+  "channel": "Facebook",
+  "region": "US",
+  "spend": 1200.50,
+  "impressions": 50000,
+  "clicks": 2400,
+  "conversions": 120
+}
+```
+
+---
+
+## 🛠️ Installation & Running
+
+### 1️⃣ Clone the Repo
+
+```bash
+git clone https://github.com/your-username/marketing-dashboard.git
+cd marketing-dashboard
+```
+
+### 2️⃣ Install Dependencies
+
+```bash
+npm install
+```
+
+### 3️⃣ Start Dev Server
+
+```bash
+npm run dev
+```
+
+### 4️⃣ Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+---
+
+## 🎨 UI & Theme
+
+✅ Light dashboard theme  
+✅ Clean typography  
+✅ Alternating table rows  
+✅ Highlighted totals  
+✅ Color-coded bar charts:
+- **Spend** = Blue
+- **Conversions** = Orange
+
+---
+
+## 📈 Chart Visualization
+
+Bar chart shows **Spend vs Conversions by Channel**, helping identify:
+
+- Top-spending channels
+- High-performance channels
+- Conversion efficiency
+
+---
+
+## 🔧 Future Enhancements (Optional Ideas)
+
+🟦 Line chart for CTR trend  
+🟩 Region-wise heatmap  
+🟨 Export to CSV / Excel  
+🟪 User login + saved dashboards  
+🟥 API-based data instead of static JSON  
+
+---
+
+## 🤝 Contributing
+
+PRs are welcome!  
+If you'd like to improve UI, UX, performance, or add visualizations — go for it!
+
+---
+
+## 📄 License
+
+MIT License — free to use and modify.
+
+---
+
+## ⭐ Show Support
+
+If you find this helpful:
+
+✅ Star the repo ⭐  
+✅ Share with your network  
+✅ Fork & build your own version  
+
+---
+
+## 🙌 Author
+
+**Your Name**  
+Frontend Engineer | React | TypeScript | Redux  
+💼 LinkedIn / GitHub links (optional)
