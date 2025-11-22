@@ -190,6 +190,5 @@ If you find this helpful:
 
 ## 🙌 Author
 
-**Your Name**  
+**Rahul Kumar Jha*  
 Frontend Engineer | React | TypeScript | Redux  
-💼 LinkedIn / GitHub links (optional)
